@@ -21,6 +21,26 @@
       --max:1180px;
       --radius:22px;
     }
+    .logo {
+  display: inline-flex;
+  align-items: center;    /* Vertically centers image and text */
+  gap: 10px;              /* Space between circle image and text */
+  text-decoration: none;  /* Removes link underline */
+  color: inherit;         /* Uses parent text color */
+}
+
+.logo-img-circle {
+  width: 40px;            /* Circle diameter */
+  height: 40px;           /* Must match width */
+  border-radius: 50%;     /* Makes image circular */
+  object-fit: cover;      /* Prevents image stretching */
+  display: block;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.25rem;     /* Adjust text size as needed */
+}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
@@ -370,9 +390,17 @@
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a class="logo" href="#home" aria-label="Midnight Pizza home">
+  <img 
+    src="https://scontent.fdac19-1.fna.fbcdn.net/v/t39.30808-6/474607282_925260443051975_5294777974595014534_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=2CKPij2Ryg8Q7kNvwGaotu4&_nc_oc=AdqKJ-HFVM2GROtJ_5QF_qBuiy1O8LyLuNOEPc8lYrgBwF5L96YT_ySwZokHRYujZk8&_nc_zt=23&_nc_ht=scontent.fdac19-1.fna&_nc_gid=Lqnjo4xziUa6U_IK8_44Bw&_nc_ss=7a2a8&oh=00_AQHVI596hlxRLz0q0z4G6-qg_-CMjYufIXh6auS3PF63Ug&oe=6A94D3EF" 
+    alt="Midnight Pizza Logo" 
+    class="logo-img-circle"
+  />
+  <span class="logo-text">Midnight<span style="color:var(--gold2)">Pizza</span></span>
+</a>
+      <!-- <a class="logo" href="#home" aria-label="Midnight Pizza home">
         <span class="logo-mark">M</span>
         <span>Midnight<span style="color:var(--gold2)">Pizza</span></span>
-      </a>
+      </a> -->
 
       <nav class="links" id="navLinks">
         <a href="#home">Home</a>
